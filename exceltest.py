@@ -30,6 +30,37 @@ sheet1.write(0, 18, 'Country')
 sheet1.write(0, 19, 'City')
 sheet1.write(0, 20, 'Postal Code')
 
+rowcount = 1
+num_employees = len(self.employees['FirstName'])
+i = 0
+while i < num_employees:
+      sheet1.write(rowcount,1, self.employees['FirstName'][i])
+      sheet1.write(rowcount,2, self.employees['LastName'][i])
+      sheet1.write(rowcount,3, self.employees['JobTitle'][i])
+      sheet1.write(rowcount,8, self.employees['Phone'][i])
+      sheet1.write(rowcount,9, self.employees['Email'][i])
+
+
+      sheet1.write(rowcount,4, self.firm_name)
+      sheet1.write(rowcount,5, self.multiple_locations)
+      sheet1.write(rowcount,6, self.bank_or_credit_union)
+      sheet1.write(rowcount,7, self.website)
+      sheet1.write(rowcount,10, num_employees)
+      sheet1.write(rowcount,11, self.num_investment_professionals)
+      sheet1.write(rowcount,12, self.finra)
+      sheet1.write(rowcount,13, num_employees)
+      sheet1.write(rowcount,14, self.address_street)
+      sheet1.write(rowcount,15, self.address_apt)
+      sheet1.write(rowcount,16, self.address_city)
+      sheet1.write(rowcount,17, self.address_state)
+      sheet1.write(rowcount,18, self.Country)
+      sheet1.write(rowcount,19, self.address_city)
+      sheet1.write(rowcount,20, self.address_postal_cose)
+
+
+
+      rowcount ++
+      i++
 
 
 wb.save('xlwt example.xls')
